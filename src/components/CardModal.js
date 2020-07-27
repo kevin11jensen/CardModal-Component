@@ -39,33 +39,53 @@ export function CardModal(props) {
     );
 }
 const CardModalContainer = styled.div `
-.overlay {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.4s ease-in-out;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(1, 1, 1, 0.75);
-    height: 100%;
-    width: 100%;
-  
-  }
-  .content {
-    position: absolute;
-    top: 4rem;
-    right: 4rem;
-    bottom: 4rem;
-    left: 4rem;
-    background: white;
-    overflow: auto;
-    
-  }
-  .modalShowing-true {
-    opacity: 1;
-    z-index: 1;
-    pointer-events: visible;
-  }
+    .overlay {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.4s ease-in-out;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(1, 1, 1, 0.75);
+        height: 100%;
+        width: 100%;
+    }
+    .content {
+        position: absolute;
+        top: 4rem;
+        right: 4rem;
+        bottom: 4rem;
+        left: 4rem;
+        background: white;
+        overflow: auto;
+    }
+    .modalShowing-true {
+        opacity: 1;
+        z-index: 1;
+        pointer-events: visible;
+    }
+    .card {
+        width: 22rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 1%;
+        background: white;
+        img {
+            width: 11rem;
+            object-fit: contain;
+        }
+        h3 {
+
+        }
+        p {
+
+        }
+        button {
+            padding: 2rem 5rem;
+            
+        }
+    }
 `
