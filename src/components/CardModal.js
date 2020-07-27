@@ -25,7 +25,10 @@ export function CardModal(props) {
                         <h2>{props.bodyHeader}</h2>
                         <p>{props.bodyP}</p>
                     </div>
-                    <button onClick = {() => {manageState()}}>close Modal</button>
+                    <div className = 'modal-btn-container'>
+                        <button onClick = {() => {manageState()}}>close Modal</button>
+                    </div>
+                    
                 </div>
             </div>
 
@@ -33,7 +36,10 @@ export function CardModal(props) {
                 <img src = {props.cardImg1} alt = {props.cardImgAlt1} />
                 <h3>{props.cardTitle}</h3>
                 <p>{props.cardText}</p>
-                <button onClick = {() => {manageState()}}>Open Modal</button>
+                <div className = 'card-btn-container'>
+                    <button onClick = {() => {manageState()}}>Open Modal</button>
+                </div>
+                
             </div>
         </CardModalContainer>
     );
@@ -60,6 +66,35 @@ const CardModalContainer = styled.div `
         left: 4rem;
         background: white;
         overflow: auto;
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 3%;
+            background: black;
+            color: white;
+        }
+        .modal-top {
+            display: flex;
+            justify-content: center;
+            img {
+                
+            }
+        }
+        .modal-info {
+
+            h2 {
+                margin-left: 11%;
+            }
+            p {
+                margin-left: 12%;
+            }
+        }
+        .modal-btn-container {
+            display: flex;
+            justify-content: center;
+        }
     }
     .modalShowing-true {
         opacity: 1;
@@ -83,7 +118,7 @@ const CardModalContainer = styled.div `
         p {
 
         }
-        button {
+        .card-btn-container {
             padding: 2rem 5rem;
             
         }
